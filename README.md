@@ -75,7 +75,7 @@ metplot('Species', metadata)
 
 ## Contact
 
-Eoin Fahy (efahy@ucsd.edu)
+Eoin Fahy, University of California San Diego (efahy@ucsd.edu)
 
 ------------------------------------------------------------------------
 
