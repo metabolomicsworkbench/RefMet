@@ -1,0 +1,27 @@
+Package: RefMet
+Type: Package
+Title: RefMet:Tools for standardization of metabolite names
+Version: 1.0.0
+Authors@R: c(
+  person(given = "Eoin", family = "Fahy", email = "efahy@ucsd.edu",
+         role = c("aut", "cre", "cph"))
+  )
+Maintainer: Eoin Fahy <efahy@ucsd.edu>
+Description: R-based access to the RefMet metabolite name standardization system.
+License: MIT + file LICENSE
+URL: https://github.com/eoindfahy/RefMet
+BugReports: https://github.com/eoindfahy/RefMet/issues
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    curl, 
+    stringi,
+    data.table,
+    ggplot2
+RoxygenNote: 7.2.3
+Suggests: 
+    rmarkdown,
+    tidyverse,
+    dplyr,
+    openxlsx
+VignetteBuilder: knitr

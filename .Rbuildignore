@@ -1,0 +1,14 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+
+^msdata_making$
+^README.Rmd$
+^doc$
+^Meta$
+^.github$
+^cran-comments\.md$
+^CRAN-RELEASE$
+^poster.png$
+^speedsizecomp.png$
+RaMS manuscript/*

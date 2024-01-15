@@ -1,0 +1,66 @@
+NAME
+2'-Deoxyuridine
+4-hydroxyphenylpyruvate
+acetylcarnitine
+Acylcarnitine (C10:0) [M+H]+
+Adenosine triphosphate
+Asn
+Butyrylcarnitine
+C16:1 SM
+C32:0 PC
+PC(56:8) 
+PC C36:4
+CE(18:2); [M+NH4]+
+CE(23:0) [M+NH4]+
+Cer(15:0)
+Ceramide d18:0/26:2
+DAG C36:3
+DAG(44:7) [M+H]
+Decanoic acid
+D-Mannonate
+Eicosanoic acid
+Erucamide
+FA(16:0)
+test_nomatch
+indolepropionate
+Isovalerylcarnitine
+Leucyl-Glycine
+L-Histidine
+lysoPC 16:0; [M+Na]+
+malate
+myristate (14:0)
+N,N,N-Trimethyllysine_R2
+Octenoyl-L-carnitine
+PA(34:1)
+palmitoyl sphingomyelin
+PC 35:2; [M-Ac-H]-
+PE 38:5 [M-H]-
+PE(26:0e)
+PE(39:4) [M-H]-
+PE(aa-40:4)
+PE-pmg(40:6)-13C0[+NH4]+
+Petroselinic acid
+Phosphatidylcholine acyl-alkyl C36:0
+Plasmanyl-PC(O-16:0/22:4)
+PS 37:4; [M-H]-
+PS 40:1; [M-H]-@7.48
+SM 34:2; [M]+@5.65
+Sphingomyelin d18:0/24:0 [M+Na]
+SQDG 43:1
+stearidonate (18:4n3)
+TAG(50:8)-13C30[M+Na]
+TAG(54:3)-13C1[M+Na]
+taurine
+taurocholate
+TG(16:1_17:0_18:1)
+TG(aaa-52:7)
+Trilauroyl-glycerol
+urate
+xanthine
+xylonate
+HMDB0000012
+99463
+C00152
+C00422
+LMFA03010001
+CHEBI:23966

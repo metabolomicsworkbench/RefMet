@@ -1,0 +1,14 @@
+*.Rproj.user
+*.Rhistory
+*.RData
+*.Ruserdata
+
+*.mzML
+*.mzXML
+
+.Rproj.user
+README.Rmd
+Meta
+/Meta/
+RaMS manuscript/*
+dev/
