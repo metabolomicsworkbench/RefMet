@@ -2,29 +2,20 @@
 % Please edit documentation in R/RefMetPlotPrint.R
 \name{metplot}
 \alias{metplot}
-\title{Grab mass-spectrometry data from file(s)}
+\title{TBA}
 \usage{
 metplot(mycat, metadata)
 }
 \arguments{
-\item{mycat}{One of the following 6 metadata items:
-'Species','Sample source','Disease association',
-'Analysis type','MS polarity','Chromatography'}
+\item{mycat}{A metadata category name}
 
-\item{metadata}{One of the following 6 metadata items:
-'Species','Sample source','Disease association',
-'Analysis type','MS polarity','Chromatography'}
+\item{metadata}{The metadata table for a metabolite of interest}
 }
 \value{
-A ploteach named after the arguments requested in
-  grab_what. E.g. $MS1 contains MS1 information, $MS2 contains fragmentation
-  info, etc. MS1 data has four columns: retention time (rt), mass-to-charge
-  (mz), intensity (int), and filename. MS2 data has six: retention time (rt),
+A plot
 }
 \description{
-The main `RaMS` function. This function accepts a list of the files that will
-be read into R's working memory and returns a list of `data.table`s
-if they are encoded in seconds.
+The metplot function.
 }
 \examples{
 library(RefMet)

@@ -2,24 +2,18 @@
 % Please edit documentation in R/RefMetCode.R
 \name{refmet_metadata}
 \alias{refmet_metadata}
-\title{Grab mass-spectrometry data from file(s)}
+\title{TBA}
 \usage{
 refmet_metadata(metabolite)
 }
 \arguments{
-\item{thefile}{A character vector of filenames to read into R's memory. Both
-absolute and relative paths are acceptable.}
+\item{metabolite}{A metabolite name}
 }
 \value{
-A data frame each named after the arguments requested in
-  grab_what. E.g. $MS1 contains MS1 information, $MS2 contains fragmentation
-  info, etc. MS1 data has four columns: retention time (rt), mass-to-charge
-  (mz), intensity (int), and filename. MS2 data has six: retention time (rt),
+A data frame
 }
 \description{
-The main `RaMS` function. This function accepts a list of the files that will
-be read into R's working memory and returns a list of `data.table`s
-if they are encoded in seconds.
+The refmet_map function.
 }
 \examples{
 library(RefMet)

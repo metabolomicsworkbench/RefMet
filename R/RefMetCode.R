@@ -1,17 +1,11 @@
 # refmet_map ----
-#' Grab mass-spectrometry data from file(s)
+#' TBA
 #'
-#' The main `RaMS` function. This function accepts a list of the files that will
-#' be read into R's working memory and returns a list of `data.table`s
-#' if they are encoded in seconds.
+#' The refmet_map function.
 #'
-#' @param thefile A character vector of filenames to read into R's memory. Both
-#'   absolute and relative paths are acceptable.
+#' @param thefile A file name
 #'
-#' @return A data frame each named after the arguments requested in
-#'   grab_what. E.g. $MS1 contains MS1 information, $MS2 contains fragmentation
-#'   info, etc. MS1 data has four columns: retention time (rt), mass-to-charge
-#'   (mz), intensity (int), and filename. MS2 data has six: retention time (rt),
+#' @return A data frame
 #'
 #' @export
 #'
@@ -38,17 +32,11 @@ refmet
 # refmet_map_df ----
 #' Grab mass-spectrometry data from file(s)
 #'
-#' The main `RaMS` function. This function accepts a list of the files that will
-#' be read into R's working memory and returns a list of `data.table`s
-#' if they are encoded in seconds.
+#' The refmet_map_df function.
 #'
-#' @param thefile A character vector of filenames to read into R's memory. Both
-#'   absolute and relative paths are acceptable.
+#' @param DX (a data frame column with metabolite names
 #'
-#' @return A data frame each named after the arguments requested in
-#'   grab_what. E.g. $MS1 contains MS1 information, $MS2 contains fragmentation
-#'   info, etc. MS1 data has four columns: retention time (rt), mass-to-charge
-#'   (mz), intensity (int), and filename. MS2 data has six: retention time (rt),
+#' @return A data frame  (rt),
 #'
 #' @export
 #'
@@ -73,19 +61,13 @@ refmet
 }
 
 # refmet_metadata ----
-#' Grab mass-spectrometry data from file(s)
+#' TBA
 #'
-#' The main `RaMS` function. This function accepts a list of the files that will
-#' be read into R's working memory and returns a list of `data.table`s
-#' if they are encoded in seconds.
+#' The refmet_map function.
 #'
-#' @param thefile A character vector of filenames to read into R's memory. Both
-#'   absolute and relative paths are acceptable.
+#' @param metabolite A metabolite name
 #'
-#' @return A data frame each named after the arguments requested in
-#'   grab_what. E.g. $MS1 contains MS1 information, $MS2 contains fragmentation
-#'   info, etc. MS1 data has four columns: retention time (rt), mass-to-charge
-#'   (mz), intensity (int), and filename. MS2 data has six: retention time (rt),
+#' @return A data frame
 #'
 #' @export
 #'

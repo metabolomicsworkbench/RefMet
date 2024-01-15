@@ -2,29 +2,20 @@
 % Please edit documentation in R/RefMetPlotPrint.R
 \name{metprint}
 \alias{metprint}
-\title{Grab mass-spectrometry data from file(s)}
+\title{TBA}
 \usage{
 metprint(mycat, metadata)
 }
 \arguments{
-\item{mycat}{One of the following 6 metadata items:
-'Species','Sample source','Disease association',
-'Analysis type','MS polarity','Chromatography'}
+\item{mycat}{A metadata category name}
 
-\item{metadata}{One of the following 6 metadata items:
-'Species','Sample source','Disease association',
-'Analysis type','MS polarity','Chromatography'}
+\item{metadata}{The metadata table for a metabolite of interest}
 }
 \value{
-A plot each named after the arguments requested in
-  grab_what. E.g. $MS1 contains MS1 information, $MS2 contains fragmentation
-  info, etc. MS1 data has four columns: retention time (rt), mass-to-charge
-  (mz), intensity (int), and filename. MS2 data has six: retention time (rt),
+A file of results
 }
 \description{
-The main `RaMS` function. This function accepts a list of the files that will
-Retention times are reported in minutes, and will be converted automatically
-if they are encoded in seconds.
+The metprint function.
 }
 \examples{
 library(RefMet)

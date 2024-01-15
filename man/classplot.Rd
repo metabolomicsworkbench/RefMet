@@ -2,7 +2,7 @@
 % Please edit documentation in R/RefMetPlotPrint.R
 \name{classplot}
 \alias{classplot}
-\title{Grab mass-spectrometry data from file(s)}
+\title{TBA}
 \usage{
 classplot(mycat, RefMet_mapped)
 }
@@ -11,20 +11,13 @@ classplot(mycat, RefMet_mapped)
 'Species','Sample source','Disease association',
 'Analysis type','MS polarity','Chromatography'}
 
-\item{RefMet_mapped, }{One of the following 6 metadata items:
-'Species','Sample source','Disease association',
-'Analysis type','MS polarity','Chromatography'}
+\item{RefMet_mapped}{a data frame of RefMet-mapped data}
 }
 \value{
-A plot each named after the arguments requested in
-  grab_what. E.g. $MS1 contains MS1 information, $MS2 contains fragmentation
-  info, etc. MS1 data has four columns: retention time (rt), mass-to-charge
-  (mz), intensity (int), and filename. MS2 data has six: retention time (rt),
+A pie chart
 }
 \description{
-The main `RaMS` function. This function accepts a list of the files that will
-Retention times are reported in minutes, and will be converted automatically
-if they are encoded in seconds.
+The classplot function
 }
 \examples{
 library(RefMet)

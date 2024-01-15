@@ -1,22 +1,13 @@
 # metplot ----
-#' Grab mass-spectrometry data from file(s)
+#' TBA
 #'
-#' The main `RaMS` function. This function accepts a list of the files that will
-#' be read into R's working memory and returns a list of `data.table`s
-#' if they are encoded in seconds.
+#' The metplot function.
 #'
-#' @param mycat One of the following 6 metadata items:
-#' 'Species','Sample source','Disease association',
-#' 'Analysis type','MS polarity','Chromatography'
+#' @param mycat A metadata category name
 #'
-#' @param metadata One of the following 6 metadata items:
-#' 'Species','Sample source','Disease association',
-#' 'Analysis type','MS polarity','Chromatography'
+#' @param metadata The metadata table for a metabolite of interest
 #'
-#' @return A ploteach named after the arguments requested in
-#'   grab_what. E.g. $MS1 contains MS1 information, $MS2 contains fragmentation
-#'   info, etc. MS1 data has four columns: retention time (rt), mass-to-charge
-#'   (mz), intensity (int), and filename. MS2 data has six: retention time (rt),
+#' @return A plot
 #'
 #' @export
 #'
@@ -47,24 +38,15 @@ plot
 }
 
 # metprint ----
-#' Grab mass-spectrometry data from file(s)
+#' TBA
 #'
-#' The main `RaMS` function. This function accepts a list of the files that will
-#' Retention times are reported in minutes, and will be converted automatically
-#' if they are encoded in seconds.
+#' The metprint function.
 #'
-#' @param mycat One of the following 6 metadata items:
-#' 'Species','Sample source','Disease association',
-#' 'Analysis type','MS polarity','Chromatography'
+#' @param mycat A metadata category name
 #'
-#' @param metadata One of the following 6 metadata items:
-#' 'Species','Sample source','Disease association',
-#' 'Analysis type','MS polarity','Chromatography'
+#' @param metadata The metadata table for a metabolite of interest
 #'
-#' @return A plot each named after the arguments requested in
-#'   grab_what. E.g. $MS1 contains MS1 information, $MS2 contains fragmentation
-#'   info, etc. MS1 data has four columns: retention time (rt), mass-to-charge
-#'   (mz), intensity (int), and filename. MS2 data has six: retention time (rt),
+#' @return A file of results
 #'
 #' @export
 #'
@@ -87,24 +69,17 @@ write.table(x,file=fname,row.names=FALSE,sep="\t", col.names=TRUE,quote=FALSE)
 }
 
 # classplot ----
-#' Grab mass-spectrometry data from file(s)
+#'TBA
 #'
-#' The main `RaMS` function. This function accepts a list of the files that will
-#' Retention times are reported in minutes, and will be converted automatically
-#' if they are encoded in seconds.
+#' The classplot function
 #'
 #' @param mycat, One of the following 6 metadata items:
 #' 'Species','Sample source','Disease association',
 #' 'Analysis type','MS polarity','Chromatography'
 #'
-#' @param RefMet_mapped, One of the following 6 metadata items:
-#' 'Species','Sample source','Disease association',
-#' 'Analysis type','MS polarity','Chromatography'
+#' @param RefMet_mapped a data frame of RefMet-mapped data
 #'
-#' @return A plot each named after the arguments requested in
-#'   grab_what. E.g. $MS1 contains MS1 information, $MS2 contains fragmentation
-#'   info, etc. MS1 data has four columns: retention time (rt), mass-to-charge
-#'   (mz), intensity (int), and filename. MS2 data has six: retention time (rt),
+#' @return A pie chart
 #'
 #' @export
 #'
