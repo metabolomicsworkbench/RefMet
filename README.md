@@ -1,4 +1,4 @@
-R-based metabolomics tools (RefMet_tools)
+R-based metabolomics tools (RefMet)
 ================
 
 ## Overview
