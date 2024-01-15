@@ -25,8 +25,8 @@ infile <- system.file("extdata", "met_list.txt", package = "RefMet")
 RefMet_mapped <- refmet_map(infile)
 head(RefMet_mapped)
 
-#Use a data frame column as input
-DF <- read.table(thefile, header = TRUE,  quote = "", sep="\t");
+#Use a data frame column containing metabolite names as input
+DF <- read.table(infile, header = TRUE,  quote = "", sep="\t");
 RefMet_mapped <- refmet_map_df(DF[,1])
 head(RefMet_mapped)
 
