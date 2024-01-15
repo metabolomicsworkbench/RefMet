@@ -68,7 +68,7 @@ head(metadata[,9:15])
 5 Amino acids                 Mouse          Kidney         Cancer          LCMS UNSPECIFIED               HILIC
 6 Amino acids      Blautia producta Bacterial cells                         LCMS    NEGATIVE               HILIC
 
-#Plot a bargraph of species distribution of Tyrosine in NMDR studies
+#Plot a bargraph of species distribution of Tyrosine in NMDR studies (Top 10 species)
 metplot('Species', metadata)
 ```
 ![](inst/extdata/Species.png)<!-- -->
