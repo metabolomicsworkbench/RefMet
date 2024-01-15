@@ -36,7 +36,15 @@ head(RefMet_mapped[,1:4])
 #Use a data frame column containing metabolite names as input
 DF <- read.table(infile, header = TRUE,  quote = "", sep="\t");
 RefMet_mapped <- refmet_map_df(DF[,1])
-head(RefMet_mapped)
+head(RefMet_mapped[,c(2,5,6,7)])
+
+            Standardized.name   Super.class               Main.class                       Sub.class
+1                Deoxyuridine Nucleic acids              Pyrimidines Pyrimidine deoxyribonucleosides
+2 4-Hydroxyphenylpyruvic acid Organic acids         Phenylpropanoids                  Cinnamic acids
+3                     CAR 2:0   Fatty Acyls             Fatty esters                 Acyl carnitines
+4                    CAR 10:0   Fatty Acyls             Fatty esters                 Acyl carnitines
+5                         ATP Nucleic acids                  Purines                     Purine rNTP
+6                  Asparagine Organic acids Amino acids and peptides                     Amino acids
 
 #Fetch metadata for a RefMet name
 metadata<- refmet_metadata("Tyrosine")
