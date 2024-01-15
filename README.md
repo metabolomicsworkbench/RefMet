@@ -24,6 +24,7 @@ library(RefMet)
 infile <- system.file("extdata", "met_list.txt", package = "RefMet")
 RefMet_mapped <- refmet_map(infile)
 head(RefMet_mapped)
+
                     Input.name           Standardized.name       Formula Exact.mass   Super.class               Main.class                       Sub.class
 1              2'-Deoxyuridine                Deoxyuridine     C9H12N2O5   228.0746 Nucleic acids              Pyrimidines Pyrimidine deoxyribonucleosides
 2      4-hydroxyphenylpyruvate 4-Hydroxyphenylpyruvic acid        C9H8O4   180.0423 Organic acids         Phenylpropanoids                  Cinnamic acids
@@ -40,6 +41,7 @@ head(RefMet_mapped)
 #Fetch metadata for a RefMet name
 metadata<- refmet_metadata("Tyrosine")
 head(metadata[,1:9])
+
   analysis    study refmet_name kegg_id                   inchi_key pubchem_cid   super_class               main_class   sub_class
 1 AN002455 ST001479    Tyrosine  C00082 OUYCCCASQSFEME-QMMMGPOBSA-N        6057 Organic acids Amino acids and peptides Amino acids
 2 AN004625 ST002832    Tyrosine  C00082 OUYCCCASQSFEME-QMMMGPOBSA-N        6057 Organic acids Amino acids and peptides Amino acids
@@ -49,6 +51,7 @@ head(metadata[,1:9])
 6 AN004626 ST002832    Tyrosine  C00082 OUYCCCASQSFEME-QMMMGPOBSA-N        6057 Organic acids Amino acids and peptides Amino acids
 
 head(metadata[,10:15])
+
                 species          sample        disease analysis_type    polarity chromatography_type
 1                 Mouse           Brain Leigh syndrome          LCMS    POSITIVE      Reversed phase
 2 Bacteroides uniformis Bacterial cells                         LCMS    POSITIVE               HILIC
