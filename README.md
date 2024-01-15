@@ -63,6 +63,7 @@ head(metadata[,9:15])
 #Plot a bargraph of species distribution of Tyrosine in NMDR studies
 metplot('Species', metadata)
 ```
+![](inst/extdata/Species.png)<!-- -->
 
 ## Contact
 
