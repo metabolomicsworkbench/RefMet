@@ -33,6 +33,7 @@ head(RefMet_mapped)
 5       Adenosine triphosphate                         ATP C10H16N5O13P3   506.9958 Nucleic acids                  Purines                     Purine rNTP
 6                          Asn                  Asparagine      C4H8N2O3   132.0535 Organic acids Amino acids and peptides                     Amino acids
 
+
 ``` r
 #Use a data frame column containing metabolite names as input
 DF <- read.table(infile, header = TRUE,  quote = "", sep="\t");
@@ -43,24 +44,10 @@ head(RefMet_mapped)
 metadata<- refmet_metadata("Tyrosine")
 head(metadata[,1:9])
 ```
-  analysis    study refmet_name kegg_id                   inchi_key pubchem_cid   super_class               main_class   sub_class
-1 AN002455 ST001479    Tyrosine  C00082 OUYCCCASQSFEME-QMMMGPOBSA-N        6057 Organic acids Amino acids and peptides Amino acids
-2 AN004625 ST002832    Tyrosine  C00082 OUYCCCASQSFEME-QMMMGPOBSA-N        6057 Organic acids Amino acids and peptides Amino acids
-3 AN004375 ST002484    Tyrosine  C00082 OUYCCCASQSFEME-QMMMGPOBSA-N        6057 Organic acids Amino acids and peptides Amino acids
-4 AN001592 ST000972    Tyrosine  C00082 OUYCCCASQSFEME-QMMMGPOBSA-N        6057 Organic acids Amino acids and peptides Amino acids
-5 AN003632 ST002223    Tyrosine  C00082 OUYCCCASQSFEME-QMMMGPOBSA-N        6057 Organic acids Amino acids and peptides Amino acids
-6 AN004626 ST002832    Tyrosine  C00082 OUYCCCASQSFEME-QMMMGPOBSA-N        6057 Organic acids Amino acids and peptides Amino acids
 
 ``` r
 head(metadata[,10:15])
 ```
-                species          sample        disease analysis_type    polarity chromatography_type
-1                 Mouse           Brain Leigh syndrome          LCMS    POSITIVE      Reversed phase
-2 Bacteroides uniformis Bacterial cells                         LCMS    POSITIVE               HILIC
-3                 Human           Blood         Autism          GCMS    POSITIVE                  GC
-4                Baboon           Blood                         GCMS    POSITIVE                  GC
-5                 Mouse          Kidney         Cancer          LCMS UNSPECIFIED               HILIC
-6      Blautia producta Bacterial cells                         LCMS    NEGATIVE               HILIC
 
 ``` r
 #Plot a bargraph of species distribution of Tyrosine in NMDR studies
