@@ -33,6 +33,9 @@ head(RefMet_mapped)
 #Fetch metadata for a RefMet name
 metadata<- refmet_metadata("Tyrosine")
 head(metadata)
+
+#Plot a bargraph of species distribution of Tyrosine in NMDR studies
+metplot('Species', metadata)
 ```
 
 ## Contact
