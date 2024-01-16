@@ -79,13 +79,8 @@ refmet
 #'
 refmet_metadata <- function(metabolite){
 metabolite_enc <- URLencode(metabolite)
-myurl <-paste0("http://dev.metabolomicsworkbench.org:45076/data/metstatR.php?REFMET_NAME=",metabolite_enc)
+myurl <-paste0("https://www.metabolomicsworkbench.org/data/metstatR.php?REFMET_NAME=",metabolite_enc)
 h <- new_handle()
-handle_setopt(
-    handle = h,
-    httpauth = 1,
-    userpwd = "DRCC:mw@UC13"
-)
 req <- curl_fetch_memory(myurl, handle = h)
 metadata <- read.table(text = rawToChar(req$content), header = TRUE, na.strings = "-", stringsAsFactors = FALSE, quote = "", comment.char = "", sep="\t");
 metadata
