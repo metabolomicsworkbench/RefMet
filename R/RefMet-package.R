@@ -14,7 +14,7 @@
 #' These R-based tools enable users to map a list of metabolite names (from a text file or a data frame column) to RefMet nomenclature in batch mode, 
 #' gain access to RefMet metadata for metabolites and perform plotting and saving functions.
 #'
-#' Reference:RefMet: a reference nomenclature for metabolomics (Eoin Fahy and Shankar Subramaniam, Nature Methods, 2020 17, 1173-1174 (2020))
+#' Reference:RefMet: a reference nomenclature for metabolomics. Eoin Fahy and Shankar Subramaniam, Nature Methods, 17, 1173-1174 (2020)
 #'
 #' See the package intro on GitHub at https://github.com/eoindfahy/RefMet for information on usage and examples
 #'
