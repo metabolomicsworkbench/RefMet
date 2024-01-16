@@ -46,6 +46,11 @@ head(RefMet_mapped[,c(2,5,6,7)])
 5                         ATP Nucleic acids                  Purines                     Purine rNTP
 6                  Asparagine Organic acids Amino acids and peptides                     Amino acids
 
+#Plot RefMEt main class distribution of metabolite list as a pie chart
+classplot('Main class',RefMet_mapped)
+```
+![](inst/extdata/Main_class.png)<!-- -->
+``` r
 #Fetch metadata for a RefMet name
 metadata<- refmet_metadata("Tyrosine")
 head(metadata[,1:8])
