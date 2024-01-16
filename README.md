@@ -49,7 +49,10 @@ head(RefMet_mapped[,c(2,5,6,7)])
 #Plot RefMEt main class distribution of metabolite list as a pie chart
 classplot('Main class',RefMet_mapped)
 ```
-![](inst/extdata/Main_class.png)<!-- -->
+<p align="center">
+  <img src="inst/extdata/Main_class.png" width="350">
+</p>
+
 ``` r
 #Fetch metadata for a RefMet name
 metadata<- refmet_metadata("Tyrosine")
