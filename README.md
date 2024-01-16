@@ -108,7 +108,7 @@ metplot('Species', metadata)
 ![](inst/extdata/Species.png)<!-- -->
 
 ``` r
-#Print species distribution of Tyrosine in NMDR studies to a file. (all pecies)
+#Print species distribution of Tyrosine in NMDR studies to a file. (all species)
 #Options are 'Species','Sample source','Disease association','Analysis type','MS polarity','Chromatography'
 
 metadata<- refmet_metadata("Tyrosine")
