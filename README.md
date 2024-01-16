@@ -50,7 +50,7 @@ head(RefMet_mapped[,c(2,5,6,7)])
 classplot('Main class',RefMet_mapped)
 ```
 <p align="center">
-  <img src="inst/extdata/Main_class.png" width="350">
+  <img src="inst/extdata/Main_class.png" width="550">
 </p>
 
 ``` r
