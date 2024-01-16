@@ -1,6 +1,6 @@
 #' @md
 #' @details
-#' to be added
+#' TBA
 #'
 #' See the package intro on GitHub at https://github.com/eoindfahy/RefMet 
 #'
