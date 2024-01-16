@@ -24,6 +24,7 @@ library(RefMet)
 ## Usage
 ``` r
 #Use a text file of metabolite names as input
+
 infile <- system.file("extdata", "met_list.txt", package = "RefMet")
 RefMet_mapped <- refmet_map(infile)
 head(RefMet_mapped[,1:4])
@@ -37,6 +38,7 @@ head(RefMet_mapped[,1:4])
 6                          Asn                  Asparagine      C4H8N2O3   132.0535
 
 #Use a data frame column containing metabolite names as input
+
 DF <- read.table(infile, header = TRUE,  quote = "", sep="\t");
 RefMet_mapped <- refmet_map_df(DF[,1])
 head(RefMet_mapped[,c(2,5,6,7)])
@@ -51,6 +53,7 @@ head(RefMet_mapped[,c(2,5,6,7)])
 
 #Plot RefMet main class distribution of metabolite list as a pie chart
 #Options are:'Super class','Main class','Sub class'
+
 classplot('Main class',RefMet_mapped)
 ```
 <p align="center">
@@ -61,6 +64,7 @@ classplot('Main class',RefMet_mapped)
 #Calculate m/z values for an adduct of interest using the RefMet neutral exact mass column in the data frame
 #created with refmet_map or refmet_map_df
 #The data frame must contain the neutral mass column labeled 'Exact.mass'
+
 RefMet_mapped_with_adduct_col<- adduct_calc('[M+H]+',RefMet_mapped)
 head(RefMet_mapped_with_adduct_col[,c(2,4,8)])
 
@@ -73,6 +77,7 @@ head(RefMet_mapped_with_adduct_col[,c(2,4,8)])
 6                  Asparagine   132.0535 133.0608
 
 #Fetch metadata for a RefMet name
+
 metadata<- refmet_metadata("Tyrosine")
 head(metadata[,1:8])
 
@@ -96,10 +101,21 @@ head(metadata[,9:15])
 
 #Plot a bargraph of species distribution of Tyrosine in NMDR studies (Top 10 species)
 #Options are 'Species','Sample source','Disease association','Analysis type','MS polarity','Chromatography'
+
+metadata<- refmet_metadata("Tyrosine")
 metplot('Species', metadata)
 ```
 ![](inst/extdata/Species.png)<!-- -->
 
+``` r
+#Print species distribution of Tyrosine in NMDR studies to a file. (all pecies)
+#Options are 'Species','Sample source','Disease association','Analysis type','MS polarity','Chromatography'
+
+metadata<- refmet_metadata("Tyrosine")
+metprint('Species', metadata)
+
+#Species distribution in NMDR studies is printed to a file called 'Species.txt' in the working directory
+```
 ## Contact
 
 Eoin Fahy, University of California San Diego (efahy@ucsd.edu)
