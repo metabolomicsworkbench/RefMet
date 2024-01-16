@@ -58,6 +58,20 @@ classplot('Main class',RefMet_mapped)
 </p>
 
 ``` r
+#Calculate m/z values for an adduct of interest using the RefMet neutral exact mass column in the data frame
+#created with refmet_map or refmet_map_df
+#The data frame must contain the neutral mass column labeled 'Exact.mass'
+RefMet_mapped_with_adduct_col<- adduct_calc('[M+H]+',RefMet_mapped)
+head(RefMet_mapped_with_adduct_col[,c(2,4,8)])
+
+            Standardized.name Exact.mass   [M+H]+
+1                Deoxyuridine   228.0746 229.0819
+2 4-Hydroxyphenylpyruvic acid   180.0423 181.0496
+3                     CAR 2:0   203.1158 204.1231
+4                    CAR 10:0   315.2410 316.2483
+5                         ATP   506.9958 508.0031
+6                  Asparagine   132.0535 133.0608
+
 #Fetch metadata for a RefMet name
 metadata<- refmet_metadata("Tyrosine")
 head(metadata[,1:8])
