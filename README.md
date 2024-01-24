@@ -12,7 +12,7 @@ These R-based tools enable users to map a list of metabolite names (from a text 
 To install the current version:
 
 ``` r
-devtools::install_github("eoindfahy/RefMet")
+devtools::install_github("metabolomicsworkbench/RefMet")
 ```
 
 Load RefMet in R:
