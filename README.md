@@ -101,9 +101,9 @@ head(metadata[,9:15])
 
 #Plot a bargraph of species distribution of Tyrosine in NMDR studies (Top 10 species)
 #Options are 'Species','Sample source','Disease association','Analysis type','MS polarity','Chromatography'
-
+# Specify width(e.g. 15) and height(e.g. 8) of plot
 metadata<- refmet_metadata("Tyrosine")
-metplot('Species', metadata)
+metplot('Species', metadata, 15,8)
 ```
 ![](inst/extdata/Species.png)<!-- -->
 

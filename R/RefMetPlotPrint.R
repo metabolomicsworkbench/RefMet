@@ -18,7 +18,7 @@
 #' head(metadata)
 #' metplot('Species', metadata)
 #'
-metplot <- function(mycat,metadata){
+metplot <- function(mycat,metadata,pwidth=15,pheight=8){
 vec<- c("Species"=10,"Sample source"=11,"Disease association"=12, "Analysis type"=13 ,"MS polarity"=14,"Chromatography"=15)
 myval <- vec[mycat]
 metabolite <- metadata[1,3]
@@ -28,6 +28,7 @@ x<- x[!(is.na(x[1]) | x[1]==""), ]
 x <- x[order(-x[,2]),]
 showrows=10
 if(nrow(x)<10){showrows=nrow(x)}
+options(repr.plot.width = pwidth, repr.plot.height =pheight)
 plot<-ggplot(x[1:showrows,],aes(x = reorder(Var1, -Freq), y = Freq,fill=Var1)) + 
 geom_bar(stat = "identity") + 
 ggtitle(mytitle) +
