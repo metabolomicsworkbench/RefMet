@@ -4,7 +4,7 @@
 \alias{metplot}
 \title{TBA}
 \usage{
-metplot(mycat, metadata)
+metplot(mycat, metadata, pwidth = 15, pheight = 8)
 }
 \arguments{
 \item{mycat}{A metadata category name}

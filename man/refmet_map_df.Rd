@@ -2,18 +2,23 @@
 % Please edit documentation in R/RefMetCode.R
 \name{refmet_map_df}
 \alias{refmet_map_df}
-\title{Grab mass-spectrometry data from file(s)}
+\title{Map metabolite names to RefMet standardized nomenclature}
 \usage{
 refmet_map_df(DX)
 }
 \arguments{
-\item{DX}{(a data frame column with metabolite names}
+\item{DX}{A data frame column of metabolite names}
 }
 \value{
-A data frame  (rt),
+A data frame data frame containing 7 columns (input name, RefMet name, formula,
+exact mass, super class, main class and sub class).
 }
 \description{
-The refmet_map_df function.
+This function accepts a data frame column of metabolite names.
+The column contents are sent to the Metabolomics Workbench server where the
+metabolite names are matched to RefMet standardized nomenclature (where possible).
+The output is a data frame containing 7 columns (input name, RefMet name, formula,
+exact mass, super class, main class and sub class).
 }
 \examples{
 library(RefMet)

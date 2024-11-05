@@ -1,11 +1,19 @@
 # refmet_map ----
-#' TBA
+
+#' Map metabolite names to RefMet standardized nomenclature
 #'
-#' The refmet_map function.
+#' This function accepts a text file of metabolite names (one per line) as input.
+#' The file contents are sent to the Metabolomics Workbench server where the
+#' metabolite names are matched to RefMet standardized nomenclature (where possible).
+#' The output is a data frame containing 14 columns (input name, RefMet name, formula,
+#' exact mass, super class, main class, sub class, PubChem CID, KEGG ID, ChEBI ID, HMDB ID,
+#' LIPID MAPS ID InChIKey and RefMet_ID).
+#' 
+#' @param thefile A file name for a text file of metabolite names (one per line)
 #'
-#' @param thefile A file name
-#'
-#' @return A data frame
+#' @return A data frame data frame containing 14 columns (input name, RefMet name, formula,
+#' exact mass, super class, main class, sub class, PubChem CID, KEGG ID, ChEBI ID, HMDB ID,
+#' LIPID MAPS ID InChIKey and RefMet_ID).
 #'
 #' @export
 #'
@@ -22,7 +30,7 @@ mets=stri_join_list(list(DF[,1]), sep="\n")
 h <- new_handle()
 handle_setform(h,  metabolite_name = mets)
 #run the RefMet request on the Metabolomics Workbench server
-req <- curl_fetch_memory("https://www.metabolomicsworkbench.org/databases/refmet/name_to_refmet_new_min.php", handle = h)
+req <- curl_fetch_memory("https://www.metabolomicsworkbench.org/databases/refmet/name_to_refmet_new_minID.php", handle = h)
 refmet <- read.table(text = rawToChar(req$content), header = TRUE, na.strings = "-", stringsAsFactors = FALSE, quote = "", comment.char = "", sep="\t");
 refmet[is.na(refmet)] <- '-'
 refmet[refmet==''] <- '-'
@@ -30,13 +38,19 @@ refmet
 }
 
 # refmet_map_df ----
-#' Grab mass-spectrometry data from file(s)
+
+#' Map metabolite names to RefMet standardized nomenclature
 #'
-#' The refmet_map_df function.
+#' This function accepts a data frame column of metabolite names.
+#' The column contents are sent to the Metabolomics Workbench server where the
+#' metabolite names are matched to RefMet standardized nomenclature (where possible).
+#' The output is a data frame containing 7 columns (input name, RefMet name, formula,
+#' exact mass, super class, main class and sub class).
+#' 
+#' @param DX A data frame column of metabolite names
 #'
-#' @param DX (a data frame column with metabolite names
-#'
-#' @return A data frame  (rt),
+#' @return A data frame data frame containing 7 columns (input name, RefMet name, formula,
+#' exact mass, super class, main class and sub class).
 #'
 #' @export
 #'
@@ -53,7 +67,7 @@ mets=stri_join_list(list(DX), sep="\n")
 h <- new_handle()
 handle_setform(h,  metabolite_name = mets)
 #run the RefMet request on the Metabolomics Workbench server
-req <- curl_fetch_memory("https://www.metabolomicsworkbench.org/databases/refmet/name_to_refmet_new_min.php", handle = h)
+req <- curl_fetch_memory("https://www.metabolomicsworkbench.org/databases/refmet/name_to_refmet_new_minID.php", handle = h)
 refmet <- read.table(text = rawToChar(req$content), header = TRUE, na.strings = "-", stringsAsFactors = FALSE, quote = "", comment.char = "", sep="\t");
 refmet[is.na(refmet)] <- '-'
 refmet[refmet==''] <- '-'

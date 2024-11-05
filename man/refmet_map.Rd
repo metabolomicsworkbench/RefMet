@@ -2,18 +2,25 @@
 % Please edit documentation in R/RefMetCode.R
 \name{refmet_map}
 \alias{refmet_map}
-\title{TBA}
+\title{Map metabolite names to RefMet standardized nomenclature}
 \usage{
 refmet_map(thefile)
 }
 \arguments{
-\item{thefile}{A file name}
+\item{thefile}{A file name for a text file of metabolite names (one per line)}
 }
 \value{
-A data frame
+A data frame data frame containing 14 columns (input name, RefMet name, formula,
+exact mass, super class, main class, sub class, PubChem CID, KEGG ID, ChEBI ID, HMDB ID,
+LIPID MAPS ID InChIKey and RefMet_ID).
 }
 \description{
-The refmet_map function.
+This function accepts a text file of metabolite names (one per line) as input.
+The file contents are sent to the Metabolomics Workbench server where the
+metabolite names are matched to RefMet standardized nomenclature (where possible).
+The output is a data frame containing 14 columns (input name, RefMet name, formula,
+exact mass, super class, main class, sub class, PubChem CID, KEGG ID, ChEBI ID, HMDB ID,
+LIPID MAPS ID InChIKey and RefMet_ID).
 }
 \examples{
 library(RefMet)
