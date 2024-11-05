@@ -12,12 +12,29 @@ These R-based tools enable users to map a list of metabolite names (from a text 
 To install the current version:
 
 ``` r
+# For Windows:
+
 devtools::install_github("metabolomicsworkbench/RefMet")
+
+# If permission issues prevent installation, lib argument can be specified similar to as explained
+# below for the Linux platform.
+
+# For Linux: The use may not have write permission in the standard install location,
+# such as, /usr/lib64/R/library, so, one can install it in the user area. The lib argument
+# of install_github specifies the library location, e.g., user can specify a subfolder
+# in their account where they have write-privilege. In the lib location below, please ensure
+# that the subfolder .local/R exists in the user account, else, create it using the Linux
+# command mkdir.
+
+USER_HOME=Sys.getenv("HOME");
+devtools::install_github("metabolomicsworkbench/RefMet", lib = paste0(USER_HOME, "/.local/R"))
+
 ```
 
-Load RefMet in R:
+Load RefMet in R: For linux, first add paste0(USER_HOME, "/.local/R") to library path.
 
 ``` r
+.libPaths( c( .libPaths(), paste0(USER_HOME, "/.local/R") )); # Linux only
 library(RefMet)
 ```
 
